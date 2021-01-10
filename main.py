@@ -6,7 +6,7 @@
 # dr_by_dt = k*i(t)                  r(0)=0
 
 # Modelling below uses examples from
-#https://apmonitor.com/pdc/index.php/Main/SolveDifferentialEquations
+# https://apmonitor.com/pdc/index.php/Main/SolveDifferentialEquations
 
 import numpy as np
 from scipy.integrate import odeint
