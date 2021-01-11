@@ -4,6 +4,8 @@ The coupled SIR ODEs are solved using odeint, from the scipy package. Model inpu
 
 Mortality is crudely estimated at 1% of the removed fraction of the population, with a 14 day lag assumed. The transmission rate is set by hand at key dates (e.g. in particular at onset of lockdowns) to fit against the historical mortality curve.
 
-Findings seem to suggest that in the U,K the third lockdown, combined with a sufficiently rapid vaccination program, should be sufficient to avoid a follow on major fourth wave.
+Findings seem to suggest that in the UK the third lockdown, combined with a sufficiently rapid vaccination program, should be sufficient to avoid a follow on major fourth wave.
 
 Please note that I am not an epidemiologist, and it is possible that this use of the SIR model is not strictly correct. This model is developed to aid my own understanding of the epidemic, but hopefully it may be interest to others. The code may be straightforwardly adapted to provide for projections for other countries.
+
+Code is posted on github, and can be run online at repl.it
