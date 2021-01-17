@@ -110,16 +110,16 @@ m_dates = m_dates[14:]
 # Plot modelled cases
 #plt.figure(0)
 plt.subplot(2,1,1)
-plt.plot(m_dates,m_dict['Standard'], label='Modelled no Xmas lockdown', color = 'blue')
-plt.plot(m_dates,m_dict['Lockdown Christmas'], label='Modelled with Xmas lockdown', color = 'blue', linestyle='dashed')
-plt.plot(m_dates,m_dict['Draconian'], label='Modelled with Xmas lockdown', color = 'blue', linestyle='dotted', alpha = 0.2)
+plt.plot(m_dates,m_dict['Standard'], label='Best model fit', color = 'blue')
+plt.plot(m_dates,m_dict['Lockdown Christmas'], label='With Xmas lockdown', color = 'blue', linestyle='dashed')
+plt.plot(m_dates,m_dict['Draconian'], label='Draconian', color = 'blue', linestyle='dotted', alpha = 0.2)
 
 # Determine excess m with without Christm#as lockdown
 excess_m = int(m_dict['Standard'].sum() - m_dict['Lockdown Christmas'].sum())
 print('Excess m is ', excess_m)
 	
 # Import and plot real M rate against this
-df = pd.read_csv('sources/data_2021-Jan-08.csv')
+df = pd.read_csv('sources/data_2021-Jan-16.csv')
 df = df.groupby(['date']).sum()
 df = df.add_suffix('_Count').reset_index()
 real_m_dates = df['date'].to_numpy(dtype='datetime64[D]')
